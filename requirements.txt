@@ -1,0 +1,8 @@
+streamlit==1.30.0
+python-dotenv==1.0.1
+openai==1.9.0
+fastapi==0.109.0
+uvicorn==0.26.0
+ultralytics==8.1.47
+torch==2.3.1
+torchvision==0.18.1
