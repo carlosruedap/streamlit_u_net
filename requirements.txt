@@ -1,3 +1,4 @@
+pip==25.1.1
 streamlit==1.30.0
 python-dotenv==1.0.1
 openai==1.9.0
