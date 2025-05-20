@@ -9,7 +9,7 @@ import torch  # Asegúrate de importar PyTorch
 # Forzar que los modelos usen la CPU
 model1 = YOLO(r'src/model_weights/best.pt').to("cpu")  # Predicción sobre los pozos en las imágenes
 model2 = YOLO(r'src/model_weights/best_colonies2.pt').to("cpu")  # Predicción sobre las colonias dentro de los pozos
-model_path = '/home/carlos/Documents/u_net/model/unet_checkpoint_24.keras'
+model_path = 'model/unet_checkpoint_24.keras'
 input_size = (224, 224)
 model = load_model(model_path, compile=False)
 
