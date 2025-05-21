@@ -37,7 +37,8 @@ def process_images_sequentially(input_dir, output_dir):
 
             # Step 3: Detect colonies
             colonies, colony_counts, total_colonies, col_img = predict_colonies(image, individual_mask)
-
+            
+            '''
             # Save the final result
             cv2.imwrite(output_path, colonies)
             print(f"Processed and saved: {output_path}")
@@ -47,6 +48,7 @@ def process_images_sequentially(input_dir, output_dir):
                 well_output_path = os.path.join(output_dir, f"well_{i+1}_{filename}")
                 cv2.imwrite(well_output_path, well_image)
                 print(f"Saved well {i+1}: {well_output_path}")
+            '''
 
             # Log colony counts
             print(f"Colony counts per well: {colony_counts}")
