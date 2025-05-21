@@ -74,10 +74,12 @@ def predict_colonies(image, individual_mask):
         well = full_mask * ind_mask  # Aislar las colonias de cada pozo
         well = cv2.normalize(well, None, 0, 255, cv2.NORM_MINMAX)
         colonies_by_wells.append(well)
-    print(f"Detallar {np.array(colonies_by_wells).shape}")
+    
+    '''print(f"Detallar {np.array(colonies_by_wells).shape}")
     print(f"Detallar {np.array(colonies_by_wells[0]).shape}")
     print(f"Min {np.min(colonies_by_wells[0])}, Max {np.max(colonies_by_wells[0])}")
-
+    '''
+    
     colony_counts, total_colonies = count_colonies(colonies_by_wells)
 
     return full_mask, colony_counts, total_colonies, colonies_by_wells
